@@ -149,15 +149,15 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text */}
             <div className="text-right">
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium px-4 py-2 rounded-full mb-6 animate-fade-in-up">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-blue-900 text-sm font-medium px-4 py-2 rounded-full mb-6 animate-fade-in-up">
                 <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse" />
                 الشريك الأمثل لجميع احتياجاتك الطباعية
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 animate-fade-in-up delay-100">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-900 leading-tight mb-6 animate-fade-in-up delay-100">
                 طباعة احترافية
                 <span className="block text-orange-400 mt-1">بجودة لا تُضاهى</span>
               </h1>
-              <p className="text-blue-100 text-lg leading-relaxed mb-8 max-w-xl animate-fade-in-up delay-200">
+              <p className="text-blue-800 text-lg leading-relaxed mb-8 max-w-xl animate-fade-in-up delay-200">
                 نقدم خدمات طباعة شاملة للشركات والأفراد — من بطاقات العمل الأنيقة إلى اللافتات الضخمة، بأعلى معايير الجودة وأسرع وقت تسليم.
               </p>
               <div className="flex flex-wrap gap-4 animate-fade-in-up delay-300">
@@ -170,7 +170,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 text-base"
+                  className="inline-flex items-center gap-2 bg-white/20 hover:bg-blue-600 hover:text-white backdrop-blur-sm border border-white/30 text-black font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 text-base"
                 >
                   استكشف خدماتنا
                 </Link>
@@ -459,7 +459,9 @@ export default function HomePage() {
                   اتصل بنا الآن
                 </Link>
                 <a
-                  href="https://wa.me/966500000000"
+                  href="https://wa.me/201148780854"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-7 py-3.5 rounded-xl transition-all hover:shadow-xl hover:shadow-green-500/40 hover:-translate-y-1"
                 >
                   <MessageCircle className="w-5 h-5" />

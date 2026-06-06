@@ -19,8 +19,8 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: '#', label: 'فيسبوك', color: 'hover:bg-blue-600' },
-  { icon: Instagram, href: '#', label: 'إنستغرام', color: 'hover:bg-pink-600' },
+  { icon: Facebook, href: 'https://www.facebook.com/share/1HDXJWk2Vx/?mibextid=wwXIfr', label: 'فيسبوك', color: 'hover:bg-blue-600' },
+  { icon: Instagram, href: 'https://www.instagram.com/__maaanaa_56?igsh=MTNsbnkxd2VyaW9seQ%3D%3D&utm_source=qr', label: 'إنستغرام', color: 'hover:bg-pink-600' },
   { icon: Twitter, href: '#', label: 'تويتر', color: 'hover:bg-sky-500' },
   { icon: Youtube, href: '#', label: 'يوتيوب', color: 'hover:bg-red-600' },
 ];
@@ -100,24 +100,24 @@ export default function Footer() {
             <h3 className="text-white font-bold text-lg mb-5 pb-2 border-b border-blue-800">تواصل معنا</h3>
             <ul className="space-y-4">
               <li>
-                <a href="tel:+966500000000" className="flex items-start gap-3 group">
+                <a href="tel:+201148780854" className="flex items-start gap-3 group">
                   <div className="w-8 h-8 bg-blue-900 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-orange-500 transition-colors mt-0.5">
                     <Phone className="w-4 h-4 text-orange-400 group-hover:text-white" />
                   </div>
                   <div>
                     <p className="text-xs text-blue-400 mb-0.5">هاتف</p>
-                    <p className="text-blue-100 text-sm font-medium">+966 50 000 0000</p>
+                    <p className="text-blue-100 text-sm font-medium">01148780854</p>
                   </div>
                 </a>
               </li>
               <li>
-                <a href="mailto:info@printpro.sa" className="flex items-start gap-3 group">
+                <a href="mailto:om3246362@gmail.com" className="flex items-start gap-3 group">
                   <div className="w-8 h-8 bg-blue-900 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-orange-500 transition-colors mt-0.5">
                     <Mail className="w-4 h-4 text-orange-400 group-hover:text-white" />
                   </div>
                   <div>
                     <p className="text-xs text-blue-400 mb-0.5">البريد الإلكتروني</p>
-                    <p className="text-blue-100 text-sm font-medium">info@printpro.sa</p>
+                    <p className="text-blue-100 text-sm font-medium">om3246362@gmail.com</p>
                   </div>
                 </a>
               </li>
@@ -128,7 +128,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <p className="text-xs text-blue-400 mb-0.5">العنوان</p>
-                    <p className="text-blue-100 text-sm">شارع الملك فهد، الرياض، المملكة العربية السعودية</p>
+                    <p className="text-blue-100 text-sm">شارع احمد عبدالحفيظ، المعادي،القاهرة</p>
                   </div>
                 </div>
               </li>

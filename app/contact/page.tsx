@@ -33,9 +33,25 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormState('sending');
-    await new Promise((r) => setTimeout(r, 1500));
-    setFormState('success');
-    setForm({ name: '', phone: '', email: '', service: '', message: '' });
+
+    try {
+      const res = await fetch('https://formspree.io/f/xpqeqvlw', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+        setFormState('success');
+        setForm({ name: '', phone: '', email: '', service: '', message: '' });
+      } else {
+        setFormState('idle');
+        alert('حدث خطأ، حاول مرة أخرى');
+      }
+    } catch {
+      setFormState('idle');
+      alert('حدث خطأ، حاول مرة أخرى');
+    }
   };
 
   return (
@@ -52,33 +68,35 @@ export default function ContactPage() {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 -mt-16">
-            <a href="tel:+966500000000" className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-100 group hover:-translate-y-1 transition-all">
+            <a href="tel:+201148780854" className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-100 group hover:-translate-y-1 transition-all">
               <div className="w-14 h-14 bg-blue-100 text-blue-700 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Phone className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-gray-900 mb-1">الهاتف</h3>
-              <p className="text-blue-700 font-semibold text-sm">+966 50 000 0000</p>
+              <p className="text-blue-700 font-semibold text-sm" >01148780854</p>
             </a>
-            <a href="https://wa.me/966500000000" className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-100 group hover:-translate-y-1 transition-all">
+            <a href="https://wa.me/201148780854" className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-100 group hover:-translate-y-1 transition-all">
               <div className="w-14 h-14 bg-green-100 text-green-700 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <MessageCircle className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-gray-900 mb-1">واتساب</h3>
               <p className="text-green-700 font-semibold text-sm">ردود فورية</p>
             </a>
-            <a href="mailto:info@printpro.sa" className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-100 group hover:-translate-y-1 transition-all">
+            <a href="https://mail.google.com/mail/?view=cm&to=om3246362@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer" className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-100 group hover:-translate-y-1 transition-all">
               <div className="w-14 h-14 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Mail className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-gray-900 mb-1">البريد</h3>
-              <p className="text-orange-600 font-semibold text-sm">info@printpro.sa</p>
+              <p className="text-orange-600 font-semibold text-sm">om3246362@gmail.com</p>
             </a>
             <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-100">
               <div className="w-14 h-14 bg-blue-100 text-blue-700 rounded-2xl flex items-center justify-center mb-4">
                 <MapPin className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-gray-900 mb-1">العنوان</h3>
-              <p className="text-blue-700 font-semibold text-sm">الرياض، السعودية</p>
+              <p className="text-blue-700 font-semibold text-sm">القاهرة :المعادي</p>
             </div>
           </div>
         </div>
@@ -147,7 +165,7 @@ export default function ContactPage() {
                   ))}
                 </div>
               </div>
-              <a href="https://wa.me/966500000000" className="block bg-green-500 hover:bg-green-600 text-white rounded-2xl p-6 text-center transition-all hover:shadow-xl hover:shadow-green-500/30 hover:-translate-y-1 whatsapp-pulse">
+              <a href="https://wa.me/201148780854" className="block bg-green-500 hover:bg-green-600 text-white rounded-2xl p-6 text-center transition-all hover:shadow-xl hover:shadow-green-500/30 hover:-translate-y-1 whatsapp-pulse">
                 <MessageCircle className="w-10 h-10 mx-auto mb-3" />
                 <h3 className="font-extrabold text-xl mb-1">تحدث عبر واتساب</h3>
                 <p className="text-green-100 text-sm">رد سريع في دقائق</p>

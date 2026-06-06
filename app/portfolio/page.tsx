@@ -123,11 +123,10 @@ export default function PortfolioPage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`flex-shrink-0 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
-                  activeCategory === cat
+                className={`flex-shrink-0 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${activeCategory === cat
                     ? 'bg-blue-700 text-white shadow-md shadow-blue-700/30'
                     : 'text-gray-500 hover:text-blue-700 hover:bg-blue-50'
-                }`}
+                  }`}
               >
                 {cat}
               </button>
